@@ -1,0 +1,138 @@
+:root {
+  --font: "Lato";
+  --bg-one: rgb(202, 245, 245);
+  --bg-two: #333;
+}
+body,
+h3,
+p,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+body {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+.full-view {
+  height: 100vh;
+  background-color: var(--bg-one);
+  padding: 2em;
+}
+.center-hero {
+  font-size: 3em;
+  width: 90%;
+  max-width: 20em;
+  max-height: 90%;
+  flex-direction: column;
+  padding: 0.5em 0;
+
+}
+.center-hero > * {
+  margin: 0.5em 0;
+}
+.mini-section {
+  font-size: 2rem;
+  height: 300px;
+  min-height: 2.5rem;
+}
+.cta-style {
+  background: #f12711; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f5af19,
+    #f12711
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f5af19, #f12711);
+}
+.product-info {
+  font-size: 1em;
+  padding: 1em;
+  flex-basis: 100%;
+  flex-direction: row;
+}
+.product-info > img {
+  display: block;
+  height: 300px;
+  max-width: 100%;
+}
+.product-info > h3 {
+  text-align: left;
+  max-width: 300px;
+  margin: 0.5em;
+}
+
+.navbar > a,
+.navbar > ul > li > a {
+  text-decoration: none;
+  color: var(--bg-two);
+  font-weight: bold;
+}
+.navbar > ul > li,
+.navbar > * > div > li {
+  list-style: none;
+}
+.navbar > ul > li > a:hover {
+  color: blue;
+}
+.flex-row {
+  flex-direction: row;
+}
+.nav-items {
+  flex-shrink: 1;
+  flex-basis: 80%;
+}
+.menu {
+    display: none;
+}
+@media screen and (max-width: 520px) {
+  .full-view {
+    height: 70vh;
+  }
+  .center-hero {
+    font-size: 1.6em;
+  }
+  .product-info {
+    flex-direction: column;
+    padding: 3em;
+  }
+ 
+}
+@media screen and (max-width: 720px) {
+    nav {
+        position: relative;
+    }
+    .nav-items {
+        display: none;
+    }
+    .menu {
+        display: block;
+        flex-basis: 80%;
+    }
+    .stroke {
+        height: 3px;
+        background-color: black;
+        position: absolute;
+        width: 2em;
+        right: 5%;
+    }
+    .stroke::after {
+        content: '';
+        display: block;
+        width: 2em;
+        height: 3px;   
+        background-color: red;
+        margin: 9px 0;
+
+    }
+}
+@media screen and (min-width: 520px) and (max-width: 780px) {
+  .full-view {
+    height: 100vh;
+  }
+  .product-info > * {
+    width: 50%;
+  }
+}
