@@ -1,0 +1,157 @@
+:root {
+  --primary: rgb(200, 227, 236);
+  --background: #222;
+  --purple: rgb(194, 58, 194);
+  --font: sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 580px;
+}
+.hero {
+  height: 85vh;
+  background-color: var(--background);
+}
+.center {
+  height: 60%;
+  width: 30%;
+  padding: 2rem;
+  font-weight: bold;
+  font-style: normal;
+  font-family: sans-serif;
+  color: white;
+}
+.space {
+  height: fit-content;
+  position: relative;
+  animation: space-text-out 1s ease-out forwards;
+}
+.text {
+  font-size: 2rem;
+}
+@keyframes space-text-out {
+  0% {
+    letter-spacing: 0;
+  }
+  100% {
+    letter-spacing: 0.5rem;
+  }
+}
+
+.space::after {
+  content: "";
+  width: 20%;
+  height: 5px;
+  background-color: var(--primary);
+  position: absolute;
+  left: 0;
+  top: -3%;
+}
+.space-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-shrink: 1;
+}
+.hero-btns {
+  max-width: 320px;
+}
+.btn {
+  text-decoration: none;
+  color: black;
+  background-color: var(--primary);
+  padding: 0.7rem;
+  border-radius: 3%;
+  margin-right: 0.5rem;
+  border-radius: 50px;
+  max-width: 160px;
+  text-align: center;
+}
+.btn:hover {
+  background-color: rgb(194, 184, 184);
+}
+.btn-cta {
+  background-color: var(--purple);
+}
+.btn-outline {
+  background-color: var(--background);
+  border: 2px solid black;
+}
+.btn-white {
+  background-color: white;
+  border-radius: 0;
+  max-width: 300px;
+}
+.btn-black {
+  background-color: #333;
+  color: white;
+}
+.logo {
+  background-color: var(--purple);
+  padding: 1rem;
+  border-radius: 44% 75% 20% 70% / 88% 77% 45% 30%;
+}
+nav {
+  background: var(--background);
+}
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 50%;
+  list-style-type: none;
+  font-weight: bold;
+  font-style: normal;
+  font-family: var(--font);
+  padding: 0.125rem;
+}
+.nav-items > li > a {
+  text-decoration: none;
+  font-family: var(--font);
+  font-size: 1rem;
+  color: white;
+}
+.companies-list {
+  --glaze-one: rgb(240,118,92);
+  --glaze-two: rgb(146,48,41);
+  height: 100vh;
+  background-image: linear-gradient(180deg, var(--glaze-one) 50%, var(--glaze-two) 50% );
+}
+.inner {
+  margin: auto;
+  width: 80%;
+  height: 50%;
+}
+.inner-text {
+  color: var(--glaze-two);
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.section-text {
+  max-width: 100px;
+  line-height: 2.8rem;
+}
+.bottom-text {
+  color: var(--glaze-one);
+  font-size: 3rem;
+  padding: .125rem;
+}
+
+.section-text-two {
+  max-width: 225px;
+}
+.inner-text-two {
+  color: var(--glaze-two);
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.small {
+  color: var(--glaze-one);
+  display: block;
+  margin-top: 40px;
+}
+
